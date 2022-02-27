@@ -10,17 +10,28 @@
     <title>Zion - главная страница</title>
 </head>
 <body class="body">
-    <aside class="navigation">
-        <button class="navigation__closer"></button>
-        <img src="" alt="" class="navigation__logo">
-        <ul class="navigation__menu">
-            <li class="navigation__item">Каталог</li>
-            <li class="navigation__item">Товары в наличии</li>
-            <li class="navigation__item">Скидки</li>
-            <li class="navigation__item">Популярное</li>
-            <li class="navigation__item">Вдохновение</li>
-        </ul>
-    </aside>
+    <div class="navigation-wrapper">
+        <aside class="navigation">
+            <button class="navigation__closer" onclick="menuConditionSwitcher()"></button>
+            <img src="assets/img/light-logo-row.png" alt="" class="navigation__logo">
+            <ul class="navigation__menu">
+                <li class="navigation__item"><a>Каталог</a></li>
+                <li class="navigation__item"><a>Товары в наличии</a></li>
+                <li class="navigation__item"><a>Скидки</a></li>
+                <li class="navigation__item"><a>Популярное</a></li>
+                <li class="navigation__item"><a>Вдохновение</a></li>
+            </ul>
+            <ul class="navigation__menu additional">
+                <li class="navigation__item"><a>Каталог</a></li>
+                <li class="navigation__item"><a>Товары в наличии</a></li>
+                <li class="navigation__item"><a>Скидки</a></li>
+                <li class="navigation__item"><a>Популярное</a></li>
+                <li class="navigation__item"><a>Вдохновение</a></li>
+            </ul>
+        </aside>
+        <div class="blur-area">
+        </div>
+    </div>
     <header class="header">
         <div class="header__background-wrapper">
             <div class="header__section-top">
@@ -47,7 +58,7 @@
         </div>
         <div class="header__section-bottom">
             <div class="menu-wrapper">
-                <button class="burger-menu">
+                <button class="burger-menu" onclick="menuConditionSwitcher()">
                     <span class="burger-menu__dash"></span>
                 </button>
             </div>
@@ -664,38 +675,35 @@
                             <h3 class="filter__title">Сортировать:</h3>
                             <div class="filter__item">
                                 <label class="filter__checkbox" >
-                                    Цена: от низкой к высокой</label>
+                                    </label>
                                 <input type="checkbox" name="scales" 
                                 class="filter__scales" checked>
                             </div>
                             <div class="filter__item">
-                                <input type="checkbox" id="fb" name="answer1" value="Facebook">
-                                <label for="fb"><span></span>Facebook</label>
-                            </div>
-
-
-
-
-                            <!-- <div class="filter__item">
-                                <label for="scales">Цена: от высокой к низкой</label>
-                                <input type="checkbox" id="descend" name="scales" 
-                                class="filter__scales" >
+                                <h3 class="filter__item-name">Цена: от низкой к высокой</h3> 
+                                <input type="checkbox" id="ascend" >
+                                <label for="ascend"><span></span></label>
                             </div>
                             <div class="filter__item">
-                                <label for="scales">По алфавиту: от А до Я</label>
-                                <input type="checkbox" id="alphabet" name="scales" 
-                                class="filter__scales">
+                                <h3 class="filter__item-name">Цена: от высокой к низкой</h3> 
+                                <input type="checkbox" id="descend" >
+                                <label for="descend"><span></span></label>
                             </div>
                             <div class="filter__item">
-                                <label for="scales">Только в наличии</label>
-                                <input type="checkbox" id="instock" name="scales" 
-                                class="filter__scales">
+                                <h3 class="filter__item-name">По алфавиту: от А до Я</h3> 
+                                <input type="checkbox" id="alphabet" >
+                                <label for="alphabet"><span></span></label>
                             </div>
-                            <div class="filter__item"> 
-                                <label for="scales">Скидки</label>
-                                <input type="checkbox" id="discount" name="scales" 
-                                class="filter__scales">
-                            </div>  -->
+                            <div class="filter__item">
+                                <h3 class="filter__item-name">Только в наличии</h3> 
+                                <input type="checkbox" id="stock" >
+                                <label for="stock"><span></span></label>
+                            </div>
+                            <div class="filter__item">
+                                <h3 class="filter__item-name">Скидки</h3> 
+                                <input type="checkbox" id="discount" >
+                                <label for="discount"><span></span></label>
+                            </div>
                         </div>
 
                         <div class="filter__range">
@@ -1032,6 +1040,7 @@
     <script src="scripts/appJQ.js"></script>
     <script src="scripts/rSlider.js"></script>
     <script src="scripts/filter.js"></script>
+    <script src="scripts/menu.js"></script>
 
 </body>
 </html>
