@@ -1878,7 +1878,23 @@ input[type=checkbox]:checked + label span {
 
 } 
 
-@media (min-width: 150px) and (max-width: 768px) {
+@media (min-width: 150px) and (max-width: 281px) { 
+    .body {
+        margin-left: 10px;
+    }
+    .mainpage__category-toggler {
+        line-height: 12px;
+    }
+    .body-title {
+        line-height: 10px;
+    }
+
+    .cart__image img {
+        max-width: 130px;
+    }
+}
+
+@media (min-width: 280px) and (max-width: 768px) {
     
     .body {
         overflow-x: hidden;
