@@ -459,8 +459,8 @@
     .categories-cards {
         display: grid;
         display: -ms-grid;
-        -ms-grid-columns: repeat(auto-fit, minmax(237px, 1fr));
-        -ms-grid-rows: repeat(auto-fit, minmax(237px, 1fr));
+        -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        -ms-grid-rows: 1fr 1fr 1fr 1fr;
         grid-template-columns: repeat(auto-fit, minmax(237px, 1fr));
         grid-template-rows: repeat(auto-fit, 1fr);
         grid-column-gap: 0px;
