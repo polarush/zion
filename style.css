@@ -428,7 +428,7 @@
     display: flex;
     flex-direction: row;
     margin: 25px 0;
-    
+    align-items: flex-end;
 }
 
 .body-title {
@@ -444,6 +444,7 @@
     font-size: 18px;
     align-items: center;
     padding-left: 20px;
+    line-height: 25px;
 }
 
 .mainpage__category-toggler::after {
@@ -804,7 +805,7 @@
     
     .single-product__image-big {
         max-width: 733px;
-        padding-right: 30px;    
+        width: 100%;    
     }
 
     .single-product__image-list {
@@ -813,20 +814,24 @@
         flex-direction: row;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        padding: 0;
-        box-sizing: border-box;
+        gap: 20px;
+        padding-left: 0;
         display: -ms-flex;
         flex-wrap: -ms-wrap;
     }
 
-    .single-product__thumbnail img{
+    .single-product__thumbnail {
         box-sizing: border-box;
         max-width: 167px;
-        width: 167px;
         max-height: 167px;
-        height: 167px;
-        padding: 0 22px 22px 0;
     }
+
+    .single-product__thumbnail img {
+        box-sizing: border-box;
+        max-width: 167px;
+        max-height: 167px;
+    }
+    
 
     .single-product__info {
         display: flex;
@@ -835,6 +840,7 @@
         -ms-flex-direction: column;
         max-width: 520px;
         width: 100%;
+        padding-left: 30px;
     }
 
     .single-product__cart-wrapper {
@@ -1750,7 +1756,7 @@ input[type=checkbox]:checked + label span {
 
     .single-product__image-big {
         max-width: 350px;
-        padding-right: 30px;
+        width: 100%;
     }
 
     .single-product__title,
@@ -1778,10 +1784,16 @@ input[type=checkbox]:checked + label span {
         align-items: center;
     }
 
+
+
     .single-product__image-list img {
         max-width: 103px;
         max-height: 103px;
-        padding: 0px 20px 20px 0;
+        
+    }
+
+    .single-product__info {
+        padding-left: 30px;
     }
 
 
@@ -1908,6 +1920,21 @@ input[type=checkbox]:checked + label span {
         line-height: 22px;
     }
 
+    .single-product__image-list {
+        gap: 5px;
+    }
+
+
+    .single-product__thumbnail {
+        max-width: 72px;
+        max-height: 72px;
+    }
+
+    .single-product__thumbnail img {
+        max-width: 72px;
+        max-height: 72px;
+    }
+
 } 
 
 
@@ -1960,20 +1987,40 @@ input[type=checkbox]:checked + label span {
         max-width: 100vw;
     }
 
+    .mainmenu { 
+        max-width: 90vw; 
+        width: 100%;
+    }
+
     .search { 
         max-width: 90vw; 
         width: 100%;
     }
 
-    .search .search-input { 
-        max-width: 320px; 
-        position: relative;
-
+    .navigation-wrapper .search {
+        
     }
 
-    .search .search-input__button { 
-        max-width: 320px; 
+    .search .search-input {
+        height: 40px;
+    }
+
+
+    .search .searchform {
+        max-width: 280px; 
+        position: relative;
+        top: 50px;
+        left: 30px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .searchform .search-input__button { 
+        right: 15px;
+        top: 7px;
         position: absolute;
+
     }
 
     .search-wrapper  {
@@ -2038,8 +2085,8 @@ input[type=checkbox]:checked + label span {
     .navigation-wrapper {
         position: absolute;
         display: flex;
-        max-width: 100%;
-        width: 100%;
+        /* max-width: 100%;
+        width: 100%; */
         left: -100%;
         flex-direction: row;
         transition: all 0.2s ease-in-out;
@@ -2056,9 +2103,10 @@ input[type=checkbox]:checked + label span {
     }
 
 
-    .search-wrapper .navigation__closer {
-        top: 30px;
-        left: 30px;
+    .search .navigation__closer {
+        right: 50px;
+        top: 10px;
+        z-index: 3;
     }
 
     .search-wrapper .header__searchform {
@@ -2352,12 +2400,16 @@ input[type=checkbox]:checked + label span {
         padding: 0;
     }
 
-    .single-product__thumbnail img {
-        box-sizing: border-box;
-        max-width: 105px;
-        max-height: 105px;
-        padding: 0 10px 10px 0;
+    .single-product__thumbnail {
+        max-width: 88px;
+        max-height: 88px;
     }
+
+    .single-product__thumbnail img {
+        max-width: 103px;
+        max-height: 103px;
+    }
+    
 
     .single-product__title,
     .single-product__sku,
@@ -2480,7 +2532,9 @@ input[type=checkbox]:checked + label span {
         flex-direction: column;
     }
 
-
+    .single-product__info {
+        padding-left: 0;
+    }
 
 
     
@@ -2491,6 +2545,11 @@ input[type=checkbox]:checked + label span {
         margin-left: 10px;
 
     }
+
+    .single-product__info {
+        padding-left: 0;
+    }
+
 
     .header,
     .header__section-top,
@@ -2539,14 +2598,16 @@ input[type=checkbox]:checked + label span {
     }
 
     .search .search-input { 
-        max-width: 320px; 
+        max-width: 190px; 
         position: relative;
 
     }
 
     .search .search-input__button { 
-        max-width: 320px; 
+        /* max-width: 190px;  */
+        right: 72px;
         position: absolute;
+
     }
 
     .search-wrapper  {
@@ -2611,18 +2672,19 @@ input[type=checkbox]:checked + label span {
     .navigation-wrapper {
         position: absolute;
         display: flex;
-        max-width: 100%;
-        width: 100%;
+        /* max-width: 100%;
+        width: 100%; */
         left: -100%;
         flex-direction: row;
         transition: all 0.2s ease-in-out;
         animation-delay: 0ms;
     }
 
-
+    
 
 
     .search-wrapper .navigation__search-wrapper {
+        position: relative;
         max-width: 280px;
         width: 100%;
         height: 100%;
@@ -2638,6 +2700,8 @@ input[type=checkbox]:checked + label span {
         padding-top: 35px;
         position: relative;
     }
+
+    .
 
     .navigation__closer {
         position: absolute;
@@ -2887,6 +2951,7 @@ input[type=checkbox]:checked + label span {
     .title-container {
         justify-content: space-between;
         align-items: center;
+
     }
 
     .discount {
@@ -2919,13 +2984,14 @@ input[type=checkbox]:checked + label span {
 
     .single-product__image-big {
         padding: 0;
+        min-width: 100%;
+        width: 100%;
     }
 
-    .single-product__thumbnail img {
+    .single-product__thumbnail /* img */ {
         box-sizing: border-box;
         max-width: 105px;
         max-height: 105px;
-        padding: 0 10px 10px 0;
     }
 
     .single-product__title,
