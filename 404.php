@@ -10,11 +10,11 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main main">
 
-		<section class="error-404 not-found">
+		<section class="error-404 not-found article">
 			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'zion' ); ?></h1>
+				<h1 class="page-title body-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'zion' ); ?></h1>
 			</header><!-- .page-header -->
 
 			<div class="page-content">
@@ -27,7 +27,7 @@ get_header();
 					?>
 
 					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'zion' ); ?></h2>
+						<h2 class="widget-title body-title"><?php esc_html_e( 'Most Used Categories', 'zion' ); ?></h2>
 						<ul>
 							<?php
 							wp_list_categories(

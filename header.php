@@ -20,8 +20,16 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> class="body">
+<?php if(is_front_page()) : ?>
+    <body class="body">
+<?php else : ?>
+    <body class="body">
+<?php endif; ?>
+
+
+<body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+
 <div class="navigation-wrapper mainmenu">
         <aside class="navigation">
             <button class="navigation__closer" onclick="menuConditionSwitcher()"></button>
@@ -106,19 +114,19 @@
         <div class="mobile-header__bottom">
             <ul class="mobile-header__bottom-list">
                 <li class="mobile-header__element">
-                    <img src="assets/img/cart-mobile.png" alt="" class="cart-mobile">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/img/cart-mobile.png" alt="" class="cart-mobile">
                     <span class="mobile-header__element-title">Вход</span>
                 </li>
                 <li class="mobile-header__element">
-                    <img src="assets/img/phone-mobile.png" alt="" class="cart-mobile">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/img/phone-mobile.png" alt="" class="cart-mobile">
                     <span class="mobile-header__element-title">Контакты</span>
                 </li>
                 <li class="mobile-header__element">
-                    <img src="assets/img/fav-mobile.png" alt="" class="cart-mobile">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/img/fav-mobile.png" alt="" class="cart-mobile">
                     <span class="mobile-header__element-title">Избранное</span>
                 </li>
                 <li class="mobile-header__element">
-                    <img src="assets/img/cart-mobile.png" alt="" class="cart-mobile">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/img/cart-mobile.png" alt="" class="cart-mobile">
                     <span class="mobile-header__element-title">Корзина</span>
                 </li>
             </ul>
@@ -179,16 +187,20 @@
                 <span class="header__product-list">Вставить список покупок</span>
                 <div class="header__user">
                     <div class="header__favorites">
-                        <img src="assets/img/star.png" alt="">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/img/star.png" alt="">
                     </div>
                     <div class="header__cart">
-                        <span class="cart-counter">0</span>
-                        <img src="assets/img/cart.png" alt="">
+                        <span class="cart-counter">
+                        <?php echo WC()->cart->get_cart_contents_count();?>
+                        </span>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/img/cart.png" alt="">
                     </div>
                     <div class="header__cabinet">
-                        <img src="assets/img/user.png" alt="">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/img/user.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    

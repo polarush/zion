@@ -13,14 +13,14 @@
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 class="entry-title body-title">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h2 class="entry-title body-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+			<div class="entry-meta regular-text">
 				<?php
 				zion_posted_on();
 				zion_posted_by();
@@ -31,7 +31,7 @@
 
 	<?php zion_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content regular-text">
 		<?php
 		the_content(
 			sprintf(
