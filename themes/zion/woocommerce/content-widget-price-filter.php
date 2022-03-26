@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
 <?php do_action( 'woocommerce_widget_price_filter_start', $args ); ?>
 
 <form method="get" action="<?php echo esc_url( $form_action ); ?>">
-	<div class="price_slider_wrapper">
+	<div class="price_slider_wrapper main">
 		<div class="price_slider" style="display:none;"></div>
 		<div class="price_slider_amount" data-step="<?php echo esc_attr( $step ); ?>">
 			<input type="text" id="min_price" name="min_price" value="<?php echo esc_attr( $current_min_price ); ?>" data-min="<?php echo esc_attr( $min_price ); ?>" placeholder="<?php echo esc_attr__( 'Min price', 'woocommerce' ); ?>" />

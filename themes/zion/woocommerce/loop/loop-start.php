@@ -1,8 +1,8 @@
 <?php
 /**
- * Loop Price
+ * Product Loop Start
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/loop/price.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/loop/loop-start.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -12,16 +12,17 @@
  *
  * @see         https://docs.woocommerce.com/document/template-structure/
  * @package     WooCommerce\Templates
- * @version     1.6.4
+ * @version     3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+	exit;
 }
-
-global $product;
 ?>
 
-<?php if ( $price_html = $product->get_price_html() ) : ?>
-	<span class="price"><?php echo $price_html; ?></span>
-<?php endif; ?>
+<!-- <div class="title-container">
+	    <h2 class="body-title discount">Скидки</h2>
+    <div class="mainpage__category-toggler">Все товары в категории</div>
+</div>
+ -->
+<ul class="products product-cards columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">

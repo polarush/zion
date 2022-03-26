@@ -19,6 +19,37 @@
     transition: all 0.3s ease-in-out;
 }
 
+.woocommerce-pagination {
+    width: 100%;
+    align-items: center;
+}
+
+.page-numbers {
+    max-width: 280px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+.attachment-woocommerce_thumbnail,
+.woocommerce-placeholder {
+    max-width: 80%;
+    margin-top: 25px;
+}
+
+.woocommerce-LoopProduct-link,
+.woocommerce-loop-product__link,
+.price bdi {
+    text-decoration: none;
+    color: #000;
+} 
 
 .body {
     background-color: #1e1e1e;
@@ -45,6 +76,11 @@
     display: none;
 }
 
+.onsale {
+    position: absolute;
+    color: #f1f1f1;
+    text-decoration: none;
+}
 
 .header__background-wrapper {
     max-width: 100%;
@@ -75,6 +111,11 @@
     height: 100%;
     margin: 0 auto;
     color: #f1f1f1;
+}
+
+.products {
+    padding: 0;
+    list-style: none;
 }
 
 .header__logo {
@@ -396,9 +437,14 @@
     position: relative;
 }
 
+.nodecorate {
+    text-decoration: none;
+}
+
 .cart-counter {
     position: absolute;
-    left: 40%;
+    left: 25%;
+    right: 25%;
     bottom: 25px;
     color: #FF9900;
     font-size: 12px;
@@ -422,6 +468,7 @@
 
 .slider__image {
     max-width: 100%;
+    border-radius: 60px;
 }
 
 .title-container {
@@ -475,6 +522,7 @@
         font-family: 'Roboto', sans-serif;
         font-size: 18px;
         color: #000;
+        padding: 0; 
     }
 
     .category-card {
@@ -486,12 +534,17 @@
         border-radius: 30px;
         text-align: center;
         max-height: 200px;
+        height: 100%;
         max-width: 237px;
         width: 100%;
         background-color: #fff;
         box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.05);
         margin-bottom: 20px;
         -ms-flex-item-align: center;
+        color: #000;
+    }
+
+    .category-card a {
         
     }
 
@@ -506,7 +559,7 @@
 
     .category-card__title {
         margin: 15px 0;
-        
+        text-decoration: none;
     }
 
     .discount::after {
@@ -531,6 +584,7 @@
         display:-ms-flexbox;    
         -ms-flex-wrap: wrap;
         justify-content: space-between;
+        text-decoration: none;
     }
 
     .product-card {
@@ -677,7 +731,7 @@
         border-bottom: 1px solid #E9E5E5;
         padding: 15px 0;
     }
-    
+
     .breadcrumbs a {
         /* margin: 0 5px; */
         color: #DCDCDC;
@@ -1407,7 +1461,6 @@ input[type=checkbox]:checked + label span {
     }
 
     .cart-counter {
-        left: 35%;
         bottom: 19px;
         font-size: 10px;
     }
